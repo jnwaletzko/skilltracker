@@ -1,0 +1,15 @@
+<h1>Listing skills</h1>
+<%= link_to 'New skill', new_skill_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @skills.each do |skill| %>
+    <tr>
+      <td><%= skill.title %></td>
+      <td><%= skill.description %></td>
+    </tr>
+  <% end %>
+</table>
