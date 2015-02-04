@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+
   def create
     @skill = Skill.find(params[:skill_id])
     @comment = @skill.comments.create(comment_params)
